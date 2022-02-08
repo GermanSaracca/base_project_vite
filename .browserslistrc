@@ -1,0 +1,8 @@
+# Browsers a soportar para autoprefix
+# - Minimo 0.2% de uso global.
+# - Que no esten sin mantener por 2 años.
+# - Internet explorer 11 para abajo.
+
+>0.2% 
+not dead 
+not ie <= 11
