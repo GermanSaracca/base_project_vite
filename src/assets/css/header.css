@@ -1,0 +1,29 @@
+.vite-header {
+    display: flex;
+    align-items: center;
+    height: var(--header-height);
+    padding: 1rem 3rem;
+    background-color: var(--color-primario);
+
+    & nav {
+        & ul {
+            display: flex;
+            gap: 2rem;
+            width: fit-content;
+            font-size: 1rem;
+
+            font-weight: bold;
+            text-transform: uppercase;
+            list-style: none;
+
+            & a {
+                color: var(--color-texto);
+                text-decoration: none;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

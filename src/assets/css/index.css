@@ -1,17 +1,36 @@
-main {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+/* Mix de normalize  y reset */
+@import './normalize.css';
+/* Variables Custom Properties */
+@import './variables.css';
+/* Partes */
+@import './header.css';
 
-    display: flex;
-    gap: 1rem;
+body {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+main {
+    min-height: calc(100vh - var(--header-height));
+    background-image: url('../images/mountain-town.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    color: #fff;
+
+    /* & h1,
+    & h2,
+    & h3 {
+        color: #fff;
+    } */
 
     & h1 {
-        font-size: 4rem;
-        color: green;
+        font-size: 3rem;
+
+        &:hover {
+            cursor: pointer;
+            color: #2c3e50;
+        }
     }
     &.active {
         color: red;
