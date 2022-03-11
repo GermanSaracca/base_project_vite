@@ -39,6 +39,18 @@ main {
         color: green;
     }
 }
-main::placeholder {
-    color: red;
+.box-container {
+    width: 50%;
+    border: solid 2px white;
+}
+.box {
+    width: 100%;
+    border: solid 2px red;
+    border-radius: 5px;
+}
+.box:container(width < 300px) {
+    border: solid 2px green;
+}
+.box:container(width > 500px) {
+    color: purple;
 }
