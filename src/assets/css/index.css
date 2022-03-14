@@ -2,6 +2,8 @@
 @import './normalize.css';
 /* Variables Custom Properties */
 @import './variables.css';
+/* Mixins */
+@import './mixins.css';
 /* Partes */
 @import './header.css';
 
@@ -11,25 +13,22 @@ body {
 
 main {
     min-height: calc(100vh - var(--header-height));
-    background-image: url('../images/mountain-town.jpg');
+    background-image: image-set(
+        url('../images/DC-section-1.png') 1x,
+        url('../images/DC-section-1@2x.png') 2x,
+        url('../images/DC-section-1@3x.png') 3x
+    );
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 2rem;
-    color: #fff;
-
-    /* & h1,
-    & h2,
-    & h3 {
-        color: #fff;
-    } */
+    color: #000;
 
     & h1 {
         font-size: 3rem;
 
         &:hover {
-            cursor: pointer;
-            color: #2c3e50;
+            color: red;
         }
     }
     &.active {
@@ -41,16 +40,33 @@ main {
 }
 .box-container {
     width: 50%;
-    border: solid 2px white;
+    color: #fff;
+    background: #000;
 }
 .box {
-    width: 100%;
-    border: solid 2px red;
+    width: 80%;
     border-radius: 5px;
+    padding: 0.5rem;
+    font-weight: 700;
+    border-radius: 15px;
+
+    & ul {
+        list-style: none;
+
+        & li {
+            @mixin font-size 20px, 28px, normal;
+        }
+    }
 }
-.box:container(width < 300px) {
-    border: solid 2px green;
+.box:container(width < 500px) {
+    border: solid 4px green;
 }
 .box:container(width > 500px) {
-    color: purple;
+    border: solid 4px red;
+}
+.box:container(300px < width < 500px) {
+    color: green;
+}
+.box:container(width > 700px) {
+    border: solid 4px violet;
 }

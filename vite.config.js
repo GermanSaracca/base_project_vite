@@ -18,6 +18,6 @@ module.exports = {
             },
         },
         outDir: resolve(__dirname, 'build'),
-        //minify: false, //( Si no se quiere minificar el build) https://vitejs.dev/config/#build-minify
+        minify: false, //( Si no se quiere minificar el build) https://vitejs.dev/config/#build-minify (aplica solo a los JS no CSS)
     },
 }

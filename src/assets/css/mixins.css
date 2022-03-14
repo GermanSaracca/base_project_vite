@@ -1,0 +1,5 @@
+@define-mixin font-size $size, $height, $letter {
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $letter;
+}

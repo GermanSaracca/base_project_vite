@@ -8,7 +8,9 @@
     },
     "devDependencies": {
         "autoprefixer": "^10.4.2",
-        "postcss-nesting": "^10.1.2",
+        "cssnano": "^5.1.4",
+        "postcss-mixins": "^9.0.2",
+        "postcss-preset-env": "^7.4.2",
         "vite": "^2.7.2"
     },
     "dependencies": {
