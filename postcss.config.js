@@ -2,9 +2,10 @@
 module.exports = {
     plugins: {
         autoprefixer: true,
-        'postcss-mixins': true,
+        'postcss-advanced-variables': true,
+        'postcss-color-function': true,
         'postcss-preset-env': {
-            stage: 2,
+            stage: false,
             features: {
                 'nesting-rules': true,
                 'image-set-function': true,

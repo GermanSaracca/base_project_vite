@@ -1,5 +1,6 @@
 //Container queries polyfill
-import '../../../node_modules/cq-prolyfill/cq-prolyfill'
+import './container-queries.js'
+
 //CSS
 import '../css/index.css'
 

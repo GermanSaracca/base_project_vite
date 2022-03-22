@@ -7,3 +7,7 @@
     --color-terciario: #e53170;
     --color-texto: #a7a9be;
 }
+
+/*Variables al estilo sass */
+$color-primario: red;
+$color-secundario: #ff8906;
