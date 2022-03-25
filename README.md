@@ -66,7 +66,7 @@ Hasta estos 3 puntos tenemos un entorno de desarrollo y configuracion de build d
     - `package-lock.json`
 
     Al cambiar la estructura por default que trae Vite, tendremos un problema al crear el build. La primera vez que lo creemos no habra problema pero cuando tengamos un build existente y realizamos otro, este no se reemplazara automaticamente por el nuevo, para que esto funcione debemos cambiar el script del build en el package.json.
-    `"build": "vite build --emptyOutDir",`
+    `"build": "vite build --emptyOutDir"`, de esta manera al realizar un nuevo build, el script primero se encarga de vaciar el directorio donde se guarda el mismo primero.
 
 5. ### Configuracion vite.config.js
 
@@ -162,6 +162,8 @@ Tambien debemos cambiar la ruta del link al JS de nuestro `index.html` y cambiar
 
         ```
 
+        Nota\*: Al usar este plugin de nesting para css el editor nos marcara muchos errores de sintaxis. Para evitar eso podemos instalar una extension llamada PostCSS Language Support.
+
         -   Ejemplo image-set()
 
         ```
@@ -174,7 +176,7 @@ Tambien debemos cambiar la ruta del link al JS de nuestro `index.html` y cambiar
 
         ```
 
-    -   container queries: `npm i cq-prolyfill` + archivo `container-queries-js` que se encuentra en la carpeta js. Este plugin nos permite estilar elementos con respecto al width de su parent.
+    -   container queries: `npm i cq-prolyfill` + archivo `container-queries-js` que se encuentra en la carpeta js. Este plugin nos permite estilar elementos con respecto al width de su parent. [Documentacion de uso](https://github.com/ausi/cq-prolyfill/blob/master/docs/usage.md)
 
         ```
             .box:container(width < 500px) {
@@ -221,3 +223,6 @@ Tambien debemos cambiar la ruta del link al JS de nuestro `index.html` y cambiar
         },
     }
 ```
+
+Esto es todo, hay muchas cosas más para agregarle y/o mejorarle. Asi como tambien existen muchos mas plugins para utilizar, podemos buscar lo que precisamos en el buscador de [PostCSS](https://www.postcss.parts/).
+Acá se encuentra el [repositorio](https://github.com/GermanSaracca/base_project_vite) con el codigo final.
